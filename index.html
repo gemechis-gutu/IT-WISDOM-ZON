@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="IT Wisdom Zone learning portal">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/style.css">
+  <title>IT Wisdom Zone</title>
+</head>
+<body>
+  <header class="top">
+    <div class="logo">IT</div>
+    <div><h1>IT Wisdom Zone</h1><p>Learn • Build • Grow</p></div>
+  </header>
+
+  <main class="wrap">
+    <section class="card" id="home">
+      <h2>Welcome to the Portal</h2>
+      <p class="muted">Sign in to open your dashboard, or continue with limited guest access.</p>
+      <div class="actions">
+        <button id="showLogin" class="primary">Login</button>
+        <button id="guestBtn" class="secondary">Continue as Guest</button>
+      </div>
+      <p id="notice" class="notice" role="status"></p>
+    </section>
+
+    <section class="card hidden" id="loginPanel">
+      <h2>Admin Login</h2>
+      <form id="loginForm">
+        <label for="username">Username</label>
+        <input id="username" autocomplete="username" maxlength="80" required>
+        <label for="password">Password</label>
+        <input id="password" type="password" autocomplete="current-password" required>
+        <button class="primary full" type="submit">Sign in</button>
+      </form>
+      <button id="backBtn" class="linkbtn">← Back</button>
+      <p class="muted small">After 3 incorrect attempts, login is locked for 15 minutes.</p>
+    </section>
+
+    <section class="card hidden" id="dashboard">
+      <div class="headrow"><h2>Dashboard</h2><button id="logoutBtn" class="secondary">Logout</button></div>
+      <p id="userLine" class="muted"></p>
+      <h3>IT Services</h3>
+      <ul id="services"></ul>
+      <h3>Security tips</h3>
+      <ul id="tips"></ul>
+    </section>
+
+    <section class="card hidden" id="guestPanel">
+      <div class="headrow"><h2>Guest Access</h2><button id="guestBackBtn" class="secondary">Back</button></div>
+      <p>You are browsing as a guest. Private dashboard features are unavailable.</p>
+      <h3>Public services</h3>
+      <ul id="guestServices"></ul>
+    </section>
+
+    <footer>© <span id="year"></span> IT Wisdom Zone • Learning project</footer>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
